@@ -59,9 +59,9 @@ def find_appversion():
 
 def guess_seamonkey_xpi_url(app, version, build_number):
 	if build_number > 0:
-		url = "ftp://ftp.mozilla.org/pub/mozilla.org/seamonkey/nightly/%s-candidates/build%d/langpack/" % (version, build_number)
+		url = "https://archive.mozilla.org/pub/seamonkey/nightly/%s-candidates/build%d/langpack/" % (version, build_number)
 	else:
-		url = "ftp://ftp.mozilla.org/pub/mozilla.org/seamonkey/releases/%s/langpack/" % version
+		url = "https://archive.mozilla.org/pub/seamonkey/releases/%s/langpack/" % version
 	return url
 
 def guess_xpi_url(app, version, build_number):
@@ -69,9 +69,9 @@ def guess_xpi_url(app, version, build_number):
 		return guess_seamonkey_xpi_url(app, version, build_number)
 
 	if build_number > 0:
-		url = "ftp://ftp.mozilla.org/pub/mozilla.org/%s/nightly/%s-candidates/build%d/linux-i686/xpi/" % (app, version, build_number)
+		url = "https://archive.mozilla.org/pub/%s/nightly/%s-candidates/build%d/linux-x86_64/xpi/" % (app, version, build_number)
 	else:
-		url = "ftp://ftp.mozilla.org/pub/mozilla.org/%s/releases/%s/linux-i686/xpi/" % (app, version)
+		url = "https://archive.mozilla.org/pub/%s/releases/%s/linux-x86_64/xpi/" % (app, version)
 	return url
 
 class LangpackXPIParser:
