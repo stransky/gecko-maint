@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python2
 # moz-grab-langpacks - A script to grab langpacks for Mozilla products
 #
 # Updated to read WebExtension langpacks by <stransky@redhat.com>
