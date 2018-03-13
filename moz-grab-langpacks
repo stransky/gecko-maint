@@ -94,14 +94,11 @@ class LangpackXPIParser:
 			if attrs["em:name"] == "English (US) Language Pack":
 				self._error = self.LANGPACK_ERROR_US_ENGLISH
 	def parse(self):
-		try:
-                        print 'Checking ' + self._xpi + ' ...'
-			self._extract_langpack()
-			installjson = "%s/manifest.json" % self._tmpdir
-			self._file = open(installjson, 'r')
-                        self.data = json.load(self._file)
-		except expat.ExpatError, e:
-			self._error = self.LANGPACK_ERROR_UNKNOWN
+		print 'Checking ' + self._xpi + ' ...'
+		self._extract_langpack()
+		installjson = "%s/manifest.json" % self._tmpdir
+		self._file = open(installjson, 'r')
+                self.data = json.load(self._file)
 		self._file.close()
 		return self._error
 
