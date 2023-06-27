@@ -69,7 +69,7 @@ def guess_xpi_url(app, version, build_number):
 		return guess_seamonkey_xpi_url(app, version, build_number)
 
 	if build_number > 0:
-		url = "https://archive.mozilla.org/pub/%s/nightly/%s-candidates/build%d/linux-x86_64/xpi/" % (app, version, build_number)
+		url = "https://archive.mozilla.org/pub/%s/candidates/%s-candidates/build%d/linux-x86_64/xpi/" % (app, version, build_number)
 	else:
 		url = "https://archive.mozilla.org/pub/%s/releases/%s/linux-x86_64/xpi/" % (app, version)
 	return url
